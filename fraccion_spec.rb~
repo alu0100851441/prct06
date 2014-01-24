@@ -1,0 +1,16 @@
+require 'lib/fraccion.rb'
+
+describe Fraccion do
+   
+        before :each do
+            @p1 = Fraccion.new(4,5)
+        end
+
+         describe "Creación correcta de el objeto" do
+               
+               it "Se almacena correctamente el numerador" do
+                   @p1.n.should eq(4)
+               end
+         end
+end
+

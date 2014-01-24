@@ -1,14 +1,17 @@
+
+task :default => :test
+
 desc "Run lib/frac_main.rb"
 task :bin do
-  sh "ruby frac_main.rb"
+  sh "ruby lib/frac_main.rb"
 end
 
 desc "Run tests with --format documentation"
 task :test do
-  sh 
+  sh "rspec  -Ilib -Ispec spec/fraccion_spec.rb --format documentation"
 end
 
 desc "Run tests with format: html"
 task :thtml do
-  sh
+  sh "rspec  -I. spec/fraccion_spec.rb --format documentation --format html --out fraccion.html"
 end
